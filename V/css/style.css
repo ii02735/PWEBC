@@ -1,0 +1,130 @@
+.formConnSub
+{
+	border:1px solid gray;
+}
+
+#strengthBar
+{
+	border:1px solid gray;
+	height:0.5rem;
+}
+
+#strengthBar span
+{
+	background-color:crimson;
+	height: 0.35rem;
+	display: block;
+	width:0%;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+#erreurPseudo
+{
+	margin-top: 5px;
+}
+
+.ui-widget,
+.ui-widget input
+{
+	font-family:'Comfortaa', cursive !important;
+}
+.ui-menu-item
+{
+	border:1px solid gray;
+	background:black;
+	color:white;
+	font-family:'Comfortaa', cursive !important;
+}
+
+#map
+{
+	height:30rem;
+	border:1px solid white;
+	width:33rem;
+}
+
+/*émulation de bootstrap pour leaflet*/
+@media (min-width: 200px) and (max-width: 330px)
+{
+	#map
+	{
+		height:30rem;
+		border:1px solid white;
+		width:17rem;
+	}	
+}
+@media (min-width: 330px) and (max-width: 450px)
+{
+	#map
+	{
+		height:36rem;
+		border:1px solid white;
+		width:25rem;
+	}
+}
+
+
+@media (min-width: 450px) and (max-width: 493px)
+{
+	#map
+	{
+		height:40rem;
+		border:1px solid white;
+		width:28rem;
+	}
+}
+
+@media (min-width: 493px) and (max-width: 576px)
+{
+	#map
+	{
+		height:35rem;
+		border:1px solid white;
+		width:30rem;
+	}
+}
+
+
+@media (min-width:589px) and (max-width:768px)
+{
+	#map
+	{
+		height:35rem;
+		border:1px solid white;
+		width:33rem;
+	}
+
+}
+
+@media (min-width:768px) and (max-width:992px)
+{
+	#map
+	{
+		height:35rem;
+		border:1px solid white;
+		width:42rem;
+	}
+
+}
+
+@media (min-width:992px) and (max-width: 1200px);
+{
+	#map
+	{
+		height:37rem;
+		border:1px solid white;
+		width:58rem;
+	}
+}
+
+@media (min-width: 1200px)
+{
+	#map
+	{
+		height:47rem;
+		border:1px solid white;
+		width:69rem;
+	}	
+}
