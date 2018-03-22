@@ -1,0 +1,67 @@
+- Service d'authentification --> formulaire HTML avec JQuery AJAX (vérification depuis la base de données)
+- Service d'inscription --> formulaire HTML avec JQuery AJAX (inscription des informations dans la base de
+ données)
+
+Pour plus utiliser JQuery, regrouper ces 2 formulaires en ACCORDÉON (JQuery UI) :
+
+ + Connectez-vous
+ + Vous êtes nouveau ? Inscrivez-vous
+
+En cliquant sur un des boutons :
+
+____________________________________________________
+													|
+ - Connectez-vous                                   |
+                                                    |
+	Pseudo :                                    	|
+	Mot de passe :                              	|
+													|
+	Connexion                                   	|
+ + Vous êtes nouveau ? Inscrivez-vous               |
+____________________________________________________|
+
+- Service de déconnexion --> session_destroy() PHP
+
+- Démarrage d'une partie :
+
+  1) L'utilisateur devra bien sûr s'être connecté auparavant
+
+CETTE PARTIE EST À DISCUTER SELON LE TEMPS QU'IL NOUS RESTE
+-----------------------------------------------------------------------
+  2) Il aura le choix entre :
+	a) Désigner un adversaire en rentrant le pseudo de ce dernier
+	b) Accepter n'importe quel adversaire qui répond à sa demande
+-----------------------------------------------------------------------
+  3) a) Si l'adversaire désigné est connecté, la partie se lance, sinon on lui affiche un message d'échec
+  (setInterval AJAX : on vérifie toutes les x secondes si l'autre adversaire est connecté --> vérification du booléen de connexion dans la table JOUEUR)
+     b) Si un adversaire accepte la demande de l'utilisateur, la partie se lance
+	
+  4) Ils jouent chacun leur tour, mais une partie se déroule en 4 phases :
+     
+     a) Un joueur place son marqueur sur la carte (Leaflet) et clique sur un bouton de confirmation pour
+	 passer la main à l'autre joueur (AJAX)
+     b) Lorsqu'ils ont choisi leur position, la partie commence : chacun des joueurs doivent deviner la 
+	 position de l'autre (Leaflet + AJAX pour le tour suivant)
+  
+ 	Lorsqu'un joueur se trouve près de la position de son adversaire, on lui affiche un message le signalant
+	qu'il se trouve dans la zone de son adversaire
+        
+        OU on lui propose d'utiliser un indice (créer des boutons en JQUERY pour faire office d'indices, 
+		on en aura 3 : 1) La partie du monde (EST-OUEST) 2)Le continent 3) Le 		
+		pays --> webservice nominatim.openstreetmap pour avoir les coordonnées géographiques ou un autre 
+		service comme google API qui peut être utile ici...)
+        Plus il utilise d'indices, plus son score sera diminué. Le score se calculera sur le nombre d'essais,
+		et sur le nombre d'indices (s'il utilise tout, son score divisé par
+	3 par exemple...)
+	
+	Ou même les deux ! Comme : "Vous chauffez !" "Brr comme il fait froid... Un indice peut être ?" 
+	"Vous gelez là..." (afficher ces messages à l'aide de JQuery)
+        Pour calculer la distance entre la vraie position du joueur adverse et de la position supposée, 
+		on utilisera la formule mathématique de Haversine (calculer la distance
+	entre 2 points géographiques --> fonction en JS)  	
+
+	Proposer un temps imparti pour effectuer son choix ? (timer en JS)
+
+     c) Lorsqu'un joueur gagne, on affiche un message (fonction JS écrit en JQuery + afficher la table des meilleurs joueurs --> AJAX JQuery)
+     d) Proposer aux joueurs de faire une nouvelle partie ou de quitter
+     
