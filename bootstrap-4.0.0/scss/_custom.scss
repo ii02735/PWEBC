@@ -1,0 +1,71 @@
+$enable-rounded:false;
+$input-bg:#0f1014;
+$input-color:white;
+$input-border-width:0px;
+$card-bg:none;
+$card-border-color:none;
+$modal-header-border-width:1px;
+$modal-content-border-color:#3b4d77;
+$modal-content-bg: #141821;  
+$modal-header-bg:#0a0c11; 
+$enable-border-inside:false;
+.banner
+{
+	background:#141821;
+}
+
+.headertitle
+{
+	font-family:'Pacifico', cursive;
+}
+
+.btn-form
+{
+	background:#2e3347;
+	color:#95a4e5;
+	display:block!important;	
+}
+
+.btn-form:hover
+{
+	color:white;
+	background:#5c71c4;
+}
+
+body
+{
+	background:#181d26 !important;
+	color:white !important;
+	font-family:'Comfortaa', cursive !important;
+}
+
+.pl-md-6,
+.px-md-6 {
+padding-left: 6rem !important; 
+}
+.pr-md-6,
+.px-md-6 {
+padding-right: 6rem !important; 
+}
+
+.btn-play
+{
+	color:white;
+	background:#05aa55;
+}
+
+.btn-play:hover
+{
+	background:#5674ad;
+}
+
+.btn-game
+{
+	color:white;
+	background:#e2b00b;
+}
+
+.btn-game:hover
+{
+	background:#5674ad;
+}
